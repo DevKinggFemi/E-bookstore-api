@@ -15,7 +15,10 @@ dotenv.config();
     app.use(cors({
         origin: 'https://e-bookstore-api.vercel.app/'
     }));
-
+app.use((req, res,next)=> {
+    res.header("Access-Control-Allow-Credentials", true);
+    next();
+})
 mongoose.connect(process.env.MONGO_URL
 ).then(()=>console.log("DBconnection Successful")).catch((err)=> console.log(err));
 app.use(express.json());
