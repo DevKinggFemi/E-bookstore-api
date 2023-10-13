@@ -18,7 +18,7 @@ app.use((req, res,next)=> {
     next();
 })
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: 'https://e-bookstore-test.vercel.app'
 }));
 mongoose.connect(process.env.MONGO_URL
 ).then(()=>console.log("DBconnection Successful")).catch((err)=> console.log(err));
