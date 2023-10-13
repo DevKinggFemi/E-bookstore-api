@@ -13,6 +13,7 @@ const cors = require('cors');
 dotenv.config();
 
     app.use(cors({
+        origin: 'https://e-bookstore-server-side.vercel.app/'
     }));
 
 mongoose.connect(process.env.MONGO_URL
