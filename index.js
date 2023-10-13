@@ -13,7 +13,7 @@ const cors = require('cors');
 dotenv.config();
 
     app.use(cors({
-        origin: 'http://e-bookstore-api.vercel.app/'
+        origin: 'http://localhost:3000/'
     }));
 app.use((req, res,next)=> {
     res.header("Access-Control-Allow-Origin", true);
