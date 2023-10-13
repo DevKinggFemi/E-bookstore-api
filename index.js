@@ -16,7 +16,7 @@ dotenv.config();
         origin: 'http://e-bookstore-api.vercel.app/'
     }));
 app.use((req, res,next)=> {
-    res.header("Access-Control-Allow-Credentials", true);
+    res.header("Access-Control-Allow-Origin", true);
     next();
 })
 mongoose.connect(process.env.MONGO_URL
