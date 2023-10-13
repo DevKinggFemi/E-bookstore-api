@@ -13,7 +13,7 @@ const cors = require('cors');
 dotenv.config();
 
     app.use(cors({
-        origin: 'https://e-bookstore-api.vercel.app/'
+        origin: 'http://e-bookstore-api.vercel.app/'
     }));
 app.use((req, res,next)=> {
     res.header("Access-Control-Allow-Credentials", true);
